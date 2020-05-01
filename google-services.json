@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "363675105881",
+    "firebase_url": "https://capture-and-translate-2ee18.firebaseio.com",
+    "project_id": "capture-and-translate-2ee18",
+    "storage_bucket": "capture-and-translate-2ee18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363675105881:android:23afbdc46a5a9e2d460f48",
+        "android_client_info": {
+          "package_name": "com.example.capturetranslate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363675105881-oe4snfkimi8i8j5pd7cj6uvd4mq727l5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKiSO9GSAI_hRW_A0TDjwYVSrPMzsx5JE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363675105881-oe4snfkimi8i8j5pd7cj6uvd4mq727l5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
