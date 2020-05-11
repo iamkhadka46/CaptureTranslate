@@ -4,12 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#d5e8f9">
 
    <ImageView
        android:layout_width="match_parent"
-       android:layout_height="575dp"
-       android:id="@+id/image_view" />
+       android:layout_height="635dp"
+       android:layout_marginHorizontal="10dp"
+       android:layout_marginTop="10dp"
+       android:id="@+id/image_view"
+       android:src="@drawable/ic_logo"
+       android:adjustViewBounds="true"
+       android:background="#d5e8f9"
+       />
 
     <Button
         android:id="@+id/upload_image_btn"
@@ -17,21 +24,33 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/capture_image_btn"
         android:backgroundTint="@android:color/holo_blue_light"
-        android:text="Choose from Gallery"
+        android:background="@drawable/roundedbutton"
+        android:text="From Gallery"
+        android:drawableRight="@drawable/ic_gallery"
         android:textAllCaps="false"
-        android:layout_marginEnd="10dp"
-        android:textSize="18sp" />
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:paddingLeft="100dp"
+        android:layout_marginHorizontal="10dp"
+        android:paddingRight="100dp"/>
 
     <Button
         android:id="@+id/capture_image_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Capture Image"
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@drawable/ic_camera"
         android:backgroundTint="@android:color/holo_orange_light"
         android:textAllCaps="false"
         android:layout_above="@+id/detect_text_image_btn"
         android:textSize="18sp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/roundedbutton"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
 
         />
 
@@ -41,10 +60,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="Detect Text"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:drawableRight="@drawable/ic_text"
+        android:layout_centerHorizontal="true"
         android:backgroundTint="@android:color/holo_green_light"
         android:textAllCaps="false"
+        android:background="@drawable/roundedbutton"
         android:textSize="18sp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginHorizontal="10dp"
         />
 
 
