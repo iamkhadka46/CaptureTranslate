@@ -1,10 +1,6 @@
 package com.example.capturetranslate;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
@@ -15,6 +11,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.ml.common.modeldownload.FirebaseModelDownloadConditions;
@@ -72,7 +71,7 @@ public class TranslateActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String toSpeak = mTranslatedText.getText().toString().trim();
                 if (toSpeak.equals( "" )) {
-                    Toast.makeText( TranslateActivity.this, "No translated text!", Toast.LENGTH_SHORT ).show();
+                    Toast.makeText( TranslateActivity.this, "No translated text detected!", Toast.LENGTH_SHORT ).show();
                 } else {
                     Toast.makeText( TranslateActivity.this, toSpeak, Toast.LENGTH_SHORT ).show();
                     //speak the text
@@ -194,6 +193,76 @@ public class TranslateActivity extends AppCompatActivity {
                 langCode = FirebaseTranslateLanguage.ES;
                 mSourceLang.setText( "Spanish" );
                 break;
+
+            case "ar":
+                langCode = FirebaseTranslateLanguage.AR;
+                mSourceLang.setText( "Arabic" );
+                break;
+
+            case "da":
+                langCode = FirebaseTranslateLanguage.DA;
+                mSourceLang.setText( "Danish" );
+                break;
+
+            case "de":
+                langCode = FirebaseTranslateLanguage.DE;
+                mSourceLang.setText( "German" );
+                break;
+
+            case "it":
+                langCode = FirebaseTranslateLanguage.IT;
+                mSourceLang.setText( "Italian" );
+                break;
+
+            case "ja":
+                langCode = FirebaseTranslateLanguage.JA;
+                mSourceLang.setText( "Japanese" );
+                break;
+
+            case "ko":
+                langCode = FirebaseTranslateLanguage.KO;
+                mSourceLang.setText( "Korean" );
+                break;
+
+            case "no":
+                langCode = FirebaseTranslateLanguage.NO;
+                mSourceLang.setText( "Norwegian" );
+                break;
+
+            case "nl":
+                langCode = FirebaseTranslateLanguage.NL;
+                mSourceLang.setText( "Dutch" );
+                break;
+
+            case "pt":
+                langCode = FirebaseTranslateLanguage.PT;
+                mSourceLang.setText( "Portuguese" );
+                break;
+
+            case "ru":
+                langCode = FirebaseTranslateLanguage.RU;
+                mSourceLang.setText( "Russian" );
+                break;
+
+            case "sv":
+                langCode = FirebaseTranslateLanguage.SV;
+                mSourceLang.setText( "Swedish" );
+                break;
+
+            case "th":
+                langCode = FirebaseTranslateLanguage.TH;
+                mSourceLang.setText( "Thai" );
+                break;
+
+            case "tr":
+                langCode = FirebaseTranslateLanguage.TR;
+                mSourceLang.setText( "Turkish" );
+                break;
+
+            case "zh":
+                langCode = FirebaseTranslateLanguage.ZH;
+                mSourceLang.setText( "Chinese" );
+                break;
             default:
                 langCode = 0;
         }
@@ -202,7 +271,7 @@ public class TranslateActivity extends AppCompatActivity {
     }
 
     private void translateText(int langCode) {
-        mTranslatedText.setText( "Translating..." );
+        mTranslatedText.setText( "Translating.... Please wait. Note: First time users must wait till package download is complete and press translate. " );
         FirebaseTranslatorOptions options = new FirebaseTranslatorOptions.Builder()
                 //from language
                 .setSourceLanguage( langCode )

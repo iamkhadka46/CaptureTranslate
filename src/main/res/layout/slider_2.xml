@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#21C9F3">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gallery_icon"
+        android:layout_marginTop="200dp"
+        android:contentDescription="@string/todo" />
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:drawableEnd="@drawable/ic_gallery"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:text="@string/from_gallery"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Use 'From Gallery' button to select image from gallery."
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:layout_marginTop="450dp"
+        android:textColor="#000000"
+        />
+
+
+
+
+
+
+
+</RelativeLayout>

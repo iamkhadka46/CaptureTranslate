@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="#da7f3e">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_icon"
+        android:layout_marginTop="200dp"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Capture Image"
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@drawable/ic_camera"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_marginTop="600dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/roundedbutton"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. Use 'Capture Image' button to open your camera and capture."
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:layout_marginTop="450dp"
+        android:textColor="#000000"
+        />
+
+
+</RelativeLayout>

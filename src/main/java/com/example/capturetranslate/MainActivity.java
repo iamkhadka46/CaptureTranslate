@@ -1,26 +1,24 @@
 package com.example.capturetranslate;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -36,13 +34,13 @@ import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
 
+    public static final String KEY_IMAGE_DATA = "data";
     private static final int RESULT_LOAD_IMG = 1 ;
-    private Button captureImageBtn, detectTextBtn, uploadBtn;
+    private Button captureImageBtn, detectTextBtn, uploadBtn, useTranslator;
     private ImageView imageView;
 
     private Bitmap imageBitmap, galleryBitmap, camera, gallery;
@@ -60,10 +58,13 @@ public class MainActivity extends AppCompatActivity {
 
         captureImageBtn = findViewById(R.id.capture_image_btn);
         detectTextBtn = findViewById(R.id.detect_text_image_btn);
+        detectTextBtn.setPaintFlags(detectTextBtn.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         imageView = findViewById(R.id.image_view);
 
         //textView.setMovementMethod(new ScrollingMovementMethod());
         uploadBtn = findViewById(R.id.upload_image_btn);
+        useTranslator = findViewById( R.id.use_translator_btn );
+        useTranslator.setPaintFlags(useTranslator.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         uploadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,8 +112,20 @@ public class MainActivity extends AppCompatActivity {
 
                 }
         }} );
+
+        useTranslator.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent activityIntent = new Intent( getApplicationContext(), TranslateActivity.class );
+                startActivity(activityIntent);
+
+            }
+        }
+        );
     }
-        //frmScreen = (BitmapDrawable) imageView.getDrawable();
+
+
+
 
 
 
